@@ -24,7 +24,7 @@ describe("StringCalculator", () => {
 
       expect(result).toBe(1);
     });
-    it("returns the sum of two numbers", () => {
+    it("sums two numbers", () => {
       const numbers = "1,2";
 
       const result = stringCalculator.add(numbers);
@@ -34,7 +34,7 @@ describe("StringCalculator", () => {
   });
 
   describe("Iteration 2", () => {
-    it("returns the sum of three numbers", () => {
+    it("sums three numbers", () => {
       const numbers = "1,2,3";
 
       const result = stringCalculator.add(numbers);
