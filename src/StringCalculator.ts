@@ -8,10 +8,5 @@ export class StringCalculator {
       sum += Number(number);
     }
     return sum;
-
-    if (nums.length > 1) {
-      return Number(nums[0]) + Number(nums[1]);
-    }
-    return Number(numbers);
   }
 }
