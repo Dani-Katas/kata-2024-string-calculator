@@ -1,13 +1,18 @@
 export class StringCalculator {
 
   add(inputText: string) {
-    return this.parse(inputText)
-      .reduce((acc, curr) => acc + curr, 0);
+    const numbers = this.parse(inputText);
+
+    return this.sumAll(numbers);
   }
 
   private parse(inputText: string) {
     return inputText
       .split(",")
       .map((num) => Number(num));
+  }
+
+  private sumAll(numbers: number[]) {
+    return numbers.reduce((acc, curr) => acc + curr, 0);
   }
 }
