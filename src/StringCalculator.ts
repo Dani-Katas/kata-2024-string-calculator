@@ -1,6 +1,6 @@
 export class StringCalculator {
 
   add(numbers: string) {
-    return 0;
+    return Number(numbers);
   }
 }
