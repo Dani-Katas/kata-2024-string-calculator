@@ -1,12 +1,10 @@
 export class StringCalculator {
 
   add(inputText: string) {
-    let nums = inputText.split(",");
+    let nums = inputText
+      .split(",")
+      .reduce((acc, curr) => acc + Number(curr), 0);
 
-    let sum = 0;
-    for (const number of nums) {
-      sum += Number(number);
-    }
-    return sum;
+    return nums;
   }
 }
