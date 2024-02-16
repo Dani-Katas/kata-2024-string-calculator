@@ -51,4 +51,13 @@ describe("StringCalculator", () => {
       expect(result).toBe(6)
     })
   })
+  describe("Iteration 4", () => {
+    it("sums numbers with custom delimiter", () => {
+      const numbers = "//;\n1;2"
+
+      const result = stringCalculator.add(numbers)
+
+      expect(result).toBe(3)
+    })
+  })
 })
