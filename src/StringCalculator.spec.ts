@@ -42,4 +42,14 @@ describe("StringCalculator", () => {
       expect(result).toBe(6);
     });
   });
+
+  describe("Iteration 3", () => {
+    it("sums numbers with newline as separator", () => {
+      const numbers = "1\n2,3";
+
+      const result = stringCalculator.add(numbers);
+
+      expect(result).toBe(6);
+    });
+  });
 });
