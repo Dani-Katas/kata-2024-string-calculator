@@ -10,4 +10,12 @@ describe("StringCalculator", () => {
 
     expect(result).toBe(0)
   })
+  it("returns the number with one number", () => {
+    const numbers = "1"
+
+    let calculator = new StringCalculator();
+    const result = calculator.add(numbers);
+
+    expect(result).toBe(1)
+  })
 })
