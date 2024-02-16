@@ -18,4 +18,12 @@ describe("StringCalculator", () => {
 
     expect(result).toBe(1)
   })
+  it("returns the sum of two numbers", () => {
+    const numbers = "1,2"
+
+    let calculator = new StringCalculator();
+    const result = calculator.add(numbers);
+
+    expect(result).toBe(3)
+  })
 })
