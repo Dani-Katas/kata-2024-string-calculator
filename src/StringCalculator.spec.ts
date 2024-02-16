@@ -29,4 +29,14 @@ describe("StringCalculator", () => {
     })
   })
 
+  describe("Iteration 2", () => {
+    it("returns the sum of three numbers", () => {
+      const numbers = "1,2,3"
+
+      let calculator = new StringCalculator();
+      const result = calculator.add(numbers);
+
+      expect(result).toBe(6)
+    })
+  })
 })
