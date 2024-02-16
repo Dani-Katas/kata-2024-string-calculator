@@ -7,9 +7,10 @@ export class StringCalculator {
 
   private parse(inputText: string, separator = ","): number[] {
     if (inputText.startsWith("//")) {
+      const customDelimiter = inputText[2]
       inputText = inputText.substring(4, inputText.length)
 
-      return this.parse(inputText, ";")
+      return this.parse(inputText, customDelimiter)
     }
     return inputText
       .replace("\n", separator)
