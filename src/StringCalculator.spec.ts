@@ -66,5 +66,12 @@ describe("StringCalculator", () => {
 
       expect(result).toBe(6)
     })
+    it("sums numbers with delimiter with more than one character", () => {
+      const numbers = "//*^\n1*^2*^3"
+
+      const result = stringCalculator.add(numbers)
+
+      expect(result).toBe(6)
+    })
   })
 })
