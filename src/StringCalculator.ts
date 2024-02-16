@@ -8,6 +8,7 @@ export class StringCalculator {
 
   private parse(inputText: string) {
     return inputText
+      .replace("\n", ",")
       .split(",")
       .map((num) => Number(num));
   }
