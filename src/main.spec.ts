@@ -1,10 +1,12 @@
 import { describe, it, expect } from "vitest"
 import { myFunction } from "./main.js"
 
-describe("Default test", () => {
-  it("should work", () => {
-    const result = myFunction()
+describe("StringCalculator", () => {
+  it("returns zero with empty string", () => {
+    const numbers = "";
 
-    expect(result).toBe(true)
+    const result = calculator.add(numbers);
+
+    expect(result).toBe(0)
   })
 })
