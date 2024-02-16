@@ -5,13 +5,16 @@ export class StringCalculator {
     return this.sumAll(numbers)
   }
 
-  private parse(inputText: string) {
+  private parse(inputText: string, separator = ","): number[] {
     if (inputText.startsWith("//")) {
-      return [1, 2]
+      let s = inputText.substring(4, inputText.length)
+
+      return this.parse(s, ";")
     }
+    const customSeparator = separator
     return inputText
-      .replace("\n", ",")
-      .split(",")
+      .replace("\n", customSeparator)
+      .split(customSeparator)
       .map((num) => Number(num))
   }
 
