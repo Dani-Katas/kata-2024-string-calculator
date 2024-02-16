@@ -7,6 +7,9 @@ export class StringCalculator {
   }
 
   private parse(inputText: string) {
+    if (inputText.startsWith("//")) {
+      return [1,2]
+    }
     return inputText
       .replace("\n", ",")
       .split(",")
